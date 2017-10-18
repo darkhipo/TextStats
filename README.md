@@ -10,3 +10,8 @@ Run some tf-idf stuff on blocks of text.
 ```bash
 java -jar TextStats-0.0.1-SNAPSHOT.jar /path/to/data_file
 ```
+
+## Tear Down
+```bash
+mvn clean
+```
