@@ -1,0 +1,51 @@
+1. You name
+
+
+2. An honest estimate of how long it took you to complete the project
+
+
+
+3. Source code
+
+    This file was sent in a zip archive containing in a directory in which the source resides.
+
+4. List of required 3rd party libraries with web links where to get them
+
+    You need to install the JDK: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+    Here are my imports, they are installed and configured during the instalation of the JDK:
+
+    java.util.StringTokenizer
+    java.util.Hashtable
+    java.util.ArrayList
+    java.util.Collections
+    java.util.Comparator
+    java.util.Map
+    java.io.FileNotFoundException
+    java.io.BufferedReader
+    java.io.IOException
+    java.io.FileReader
+
+    If you are running in Windows you'll need to download and install Cygwin (https://www.cygwin.com/) to follow my instructions.
+
+5. Build and run instructions
+
+    These instructions are for Ubuntu Linux 14.04, maybe they will work on a Mac.
+    If you're using Windows install Cygwin and execute the build instructions in that.
+
+    I suppose that you will unzip the archive into some directory. Set a bash variable (SOURCE) to the fully qualified path of that directory.
+    I suppose that you will set a bash variable (INPUT_FILE) to the fully qualified path of the input file.
+
+    To build execute the following command from bash: make -C ${SOURCE}
+    To run the test execute the following command from bash: ${SOURCE}/tst.jar "${INPUT_FILE}"
+
+6. Output
+
+    The output file was included in the zip archive containing this message. The output file is named output.tsv .
+    You may read the output in either a text editor or in a spreadsheet.
+
+7. List of particular decisions you made regarding the processing of the text file.
+
+    I assume by rank you mean rank in order of the number of occurances in the file.
+    I assume by frequency you mean the number of occurences of a given word divided by the total number of words in the document.
+    I remove all punctuation and numbers from the words, 'word' is an ambiguous term and I choose to interpret it as contiguous sequences of whitespace delimited characters with punctuation and numbers removed.
